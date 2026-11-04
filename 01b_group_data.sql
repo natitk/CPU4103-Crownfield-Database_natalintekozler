@@ -1,0 +1,178 @@
+USE CrownfieldHospital;
+
+INSERT INTO Specialties (SpecialtyID, SpecialtyName) VALUES
+('SP001', 'Glaucoma'),
+('SP002', 'Retina'),
+('SP003', 'Cornea'),
+('SP101', 'Paediatric Ophthalmology'),
+('SP102', 'Neuro-Ophthalmology'),
+('SP103', 'Oculoplastics'),
+('SP104', 'Uveitis'),
+('SP105', 'Medical Retina'),
+('SP106', 'Vitreo-Retinal Surgery'),
+('SP107', 'Strabismus'),
+('SP108', 'Low Vision'),
+('SP109', 'Ocular Oncology'),
+('SP110', 'Refractive Surgery');
+
+INSERT INTO Clinics (ClinicID, ClinicName) VALUES
+('CL001', 'City Road'),
+('CL002', 'Bedford'),
+('CL003', 'Croydon'),
+('CL101', 'Sutton'),
+('CL102', 'Kingston'),
+('CL103', 'Wimbledon'),
+('CL104', 'Epsom'),
+('CL105', 'Richmond'),
+('CL106', 'Bromley'),
+('CL107', 'Lewisham'),
+('CL108', 'Greenwich'),
+('CL109', 'Hammersmith'),
+('CL110', 'Stratford');
+
+INSERT INTO Diagnoses (DiagnosisID, DiagnosisName) VALUES
+('D001', 'Ocular hypertension'),
+('D002', 'Diabetic macular oedema'),
+('D003', 'Glaucoma suspect'),
+('D004', 'Keratoconus'),
+('D101', 'Amblyopia'),
+('D102', 'Optic neuritis'),
+('D103', 'Ptosis'),
+('D104', 'Anterior uveitis'),
+('D105', 'Age-related macular degeneration'),
+('D106', 'Retinal detachment'),
+('D107', 'Esotropia'),
+('D108', 'Low vision impairment'),
+('D109', 'Choroidal naevus'),
+('D110', 'Myopia');
+
+INSERT INTO Medicines (MedicineID, MedicineName) VALUES
+('M001', 'Latanoprost'),
+('M002', 'Timolol'),
+('M003', 'Aflibercept'),
+('M004', 'Sodium chloride drops'),
+('M101', 'Artificial tears'),
+('M102', 'Prednisolone eye drops'),
+('M103', 'Cyclopentolate eye drops'),
+('M104', 'Brimonidine eye drops'),
+('M105', 'Dorzolamide eye drops'),
+('M106', 'Ofloxacin eye drops'),
+('M107', 'Ketorolac eye drops'),
+('M108', 'Olopatadine eye drops'),
+('M109', 'Carbomer eye gel'),
+('M110', 'Sodium hyaluronate eye drops');
+
+INSERT INTO Patients (PatientID, PatientName, Postcode) VALUES
+('OP001', 'Amina Yusuf', 'NE1 4AB'),
+('OP002', 'Daniel Reed', 'N16 7QP'),
+('OP003', 'Sofia Bennett', 'E8 2LD'),
+('OP004', 'Michael Okoro', 'SE6 3RT'),
+('OP101', 'Emily Carter', 'SW1A 1AA'),
+('OP102', 'Noah Williams', 'CR0 2AB'),
+('OP103', 'Olivia Taylor', 'BR1 3CD'),
+('OP104', 'Liam Brown', 'SE1 4EF'),
+('OP105', 'Ava Wilson', 'E1 5GH'),
+('OP106', 'Ethan Davies', 'N1 6JK'),
+('OP107', 'Isla Evans', 'NW1 7LM'),
+('OP108', 'Lucas Thomas', 'SM1 8NP'),
+('OP109', 'Mia Roberts', 'KT1 9QR'),
+('OP110', 'Jack Harris', 'W1 2ST');
+
+INSERT INTO Clinicians (ClinicianID, ClinicianName, SpecialtyID) VALUES
+('C001', 'Dr Maya Shah', 'SP001'),
+('C002', 'Dr Leo Grant', 'SP002'),
+('C003', 'Dr Priya Nair', 'SP003'),
+('C101', 'Dr Alice Morgan', 'SP101'),
+('C102', 'Dr Ben Foster', 'SP102'),
+('C103', 'Dr Chloe Green', 'SP103'),
+('C104', 'Dr David King', 'SP104'),
+('C105', 'Dr Ella Scott', 'SP105'),
+('C106', 'Dr Finn Baker', 'SP106'),
+('C107', 'Dr Grace Hill', 'SP107'),
+('C108', 'Dr Henry Ward', 'SP108'),
+('C109', 'Dr Ivy Cooper', 'SP109'),
+('C110', 'Dr James Turner', 'SP110');
+
+INSERT INTO Appointments (AppointmentID, PatientID, ClinicianID, ClinicID, AppointmentDate, AppointmentTime) VALUES
+('A001', 'OP001', 'C001', 'CL001', '2026-10-05', '09:00:00'),
+('A002', 'OP002', 'C002', 'CL001', '2026-10-05', '09:30:00'),
+('A003', 'OP001', 'C001', 'CL002', '2026-11-16', '10:15:00'),
+('A004', 'OP003', 'C001', 'CL001', '2026-10-06', '11:00:00'),
+('A005', 'OP004', 'C003', 'CL003', '2026-10-07', '14:00:00'),
+('A101', 'OP101', 'C101', 'CL101', '2026-11-02', '09:00:00'),
+('A102', 'OP102', 'C102', 'CL102', '2026-11-02', '09:30:00'),
+('A103', 'OP103', 'C103', 'CL103', '2026-11-03', '10:00:00'),
+('A104', 'OP104', 'C104', 'CL104', '2026-11-03', '10:30:00'),
+('A105', 'OP105', 'C105', 'CL105', '2026-11-04', '11:00:00'),
+('A106', 'OP106', 'C106', 'CL106', '2026-11-04', '11:30:00'),
+('A107', 'OP107', 'C107', 'CL107', '2026-11-05', '12:00:00'),
+('A108', 'OP108', 'C108', 'CL108', '2026-11-05', '13:00:00'),
+('A109', 'OP109', 'C109', 'CL109', '2026-11-06', '14:00:00'),
+('A110', 'OP110', 'C110', 'CL110', '2026-11-06', '14:30:00');
+
+INSERT INTO AppointmentDiagnoses (AppointmentID, DiagnosisID) VALUES
+('A001', 'D001'),
+('A002', 'D002'),
+('A003', 'D001'),
+('A004', 'D003'),
+('A005', 'D004'),
+('A101', 'D101'),
+('A102', 'D102'),
+('A103', 'D103'),
+('A104', 'D104'),
+('A105', 'D105'),
+('A106', 'D106'),
+('A107', 'D107'),
+('A108', 'D108'),
+('A109', 'D109'),
+('A110', 'D110');
+
+INSERT INTO Prescriptions (PrescriptionID, AppointmentID) VALUES
+('PR001', 'A001'),
+('PR002', 'A002'),
+('PR003', 'A003'),
+('PR004', 'A005'),
+('PR101', 'A101'),
+('PR102', 'A102'),
+('PR103', 'A103'),
+('PR104', 'A104'),
+('PR105', 'A105'),
+('PR106', 'A106'),
+('PR107', 'A107'),
+('PR108', 'A108'),
+('PR109', 'A109'),
+('PR110', 'A110');
+
+INSERT INTO PrescriptionItems (PrescriptionID, ItemNumber, MedicineID, Dose, Route, Frequency, Duration) VALUES
+('PR001', 1, 'M001', NULL, NULL, NULL, NULL),
+('PR001', 2, 'M002', NULL, NULL, NULL, NULL),
+('PR002', 1, 'M003', NULL, NULL, NULL, NULL),
+('PR003', 1, 'M001', NULL, NULL, NULL, NULL),
+('PR004', 1, 'M004', NULL, NULL, NULL, NULL),
+('PR101', 1, 'M101', '1 drop', 'Topical', 'As required', 'Ongoing'),
+('PR102', 1, 'M102', '1 drop', 'Topical', 'Four times daily', '2 weeks'),
+('PR103', 1, 'M103', '1 drop', 'Topical', 'Once before examination', 'Single dose'),
+('PR104', 1, 'M104', '1 drop', 'Topical', 'Twice daily', 'Ongoing'),
+('PR105', 1, 'M105', '1 drop', 'Topical', 'Three times daily', 'Ongoing'),
+('PR106', 1, 'M106', '1 drop', 'Topical', 'Four times daily', '7 days'),
+('PR107', 1, 'M107', '1 drop', 'Topical', 'Three times daily', '2 weeks'),
+('PR108', 1, 'M108', '1 drop', 'Topical', 'Twice daily', '4 weeks'),
+('PR109', 1, 'M109', '1 drop', 'Topical', 'Three times daily', 'Ongoing'),
+('PR110', 1, 'M110', '1 drop', 'Topical', 'As required', 'Ongoing');
+
+INSERT INTO FollowUpPlans (FollowUpID, AppointmentID, DueDate, Priority, FollowUpStatus, Notes) VALUES
+('F001', 'A001', '2026-11-16', 'High', 'Not recorded', 'Review IOP'),
+('F002', 'A002', '2026-11-02', 'Urgent', 'Not recorded', 'OCT before review'),
+('F003', 'A003', '2027-02-08', 'Routine', 'Not recorded', 'Visual field test'),
+('F004', 'A004', '2027-04-06', 'Routine', 'Not recorded', 'Monitor'),
+('F005', 'A005', '2026-12-02', 'Routine', 'Not recorded', 'Corneal topography'),
+('F101', 'A101', '2026-12-02', 'Routine', 'Pending', 'Synthetic test record'),
+('F102', 'A102', '2026-12-03', 'High', 'Scheduled', 'Synthetic test record'),
+('F103', 'A103', '2026-12-04', 'Routine', 'Pending', 'Synthetic test record'),
+('F104', 'A104', '2026-12-05', 'High', 'Scheduled', 'Synthetic test record'),
+('F105', 'A105', '2026-12-06', 'Routine', 'Pending', 'Synthetic test record'),
+('F106', 'A106', '2026-12-07', 'Urgent', 'Scheduled', 'Synthetic test record'),
+('F107', 'A107', '2026-12-08', 'Routine', 'Pending', 'Synthetic test record'),
+('F108', 'A108', '2026-12-09', 'Routine', 'Scheduled', 'Synthetic test record'),
+('F109', 'A109', '2026-12-10', 'High', 'Pending', 'Synthetic test record'),
+('F110', 'A110', '2026-12-11', 'Routine', 'Scheduled', 'Synthetic test record');
