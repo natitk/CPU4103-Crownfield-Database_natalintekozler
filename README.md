@@ -50,7 +50,18 @@ Execute) to see each result.
 | Part D: transaction with rollback | `04b_transactions.sql` |
 | Extra test data and the `PatientAccounts` table (my own addition to the group design) | `01c_my_extra_data.sql`, `04_security.sql` |
 
-## How to test the key features
+## Attribution (who made what)
+
+- **ER diagram (`05_ERD.png`):** made by Daniel, a member of my group. Shared artefact.
+- **`01_schema.sql`:** table definitions shared by Daniel. I removed the sample-data
+  INSERT statements and the check queries, because the data is loaded by `01b_group_data.sql`.
+  The table definitions themselves are unchanged.
+- **`01b_group_data.sql`:** the shared group data file from our Teams channel, unchanged.
+- **`01a_alter_table.sql`:** my own implementation of the group rules (no double booking,
+  clinic hours, indexes) as `ALTER TABLE` statements.
+- **All other files:** my individual work, written, run and tested by me.
+-
+- ## How to test the key features
 
 - **Procedure:** `CALL GetClinicianSchedule('C001');` returns 3 rows.
   `CALL GetClinicianSchedule('C999');` raises "Unknown ClinicianID".
