@@ -6,7 +6,6 @@
 
 **Course:** CPU4 103 Introduction to Database
 
-
 ## Summative description
 
 This repository contains the MySQL implementation for the Crownfield Eye Hospital
@@ -29,15 +28,16 @@ order and wait for each one to finish before the next.
 | Order | File | Owner | What it does |
 |---|---|---|---|
 | 1 | `01_schema.sql` | GROUP (shared) | Creates the database `CrownfieldHospital` and the 11 tables |
-| 2 | `01b_group_data.sql` | GROUP (shared) | Loads the Appendix 1 data plus synthetic records |
-| 3 | `01c_my_extra_data.sql` | INDIVIDUAL | Adds two test patients with no appointment (for the LEFT JOIN) |
-| 4 | `02_individual_queries.sql` | INDIVIDUAL | Part C queries 1-4 |
-| 5 | `03_procedure_and_trigger.sql` | INDIVIDUAL | Query 5 (stored procedure) and query 6 (triggers) |
-| 6 | `04_security.sql` | INDIVIDUAL | Roles, privileges, demo users, salted password hashing |
-| 7 | `04b_transactions.sql` | INDIVIDUAL | Atomic booking procedure (COMMIT / ROLLBACK) |
+| 2 | `01a_alter_table.sql` | INDIVIDUAL | ALTER TABLE: indexes, no double booking, clinic hours (run once) |
+| 3 | `01b_group_data.sql` | GROUP (shared) | Loads the Appendix 1 data plus synthetic records |
+| 4 | `01c_my_extra_data.sql` | INDIVIDUAL | Adds two test patients with no appointment (for the LEFT JOIN) |
+| 5 | `02_individual_queries.sql` | INDIVIDUAL | Part C queries 1-4 |
+| 6 | `03_procedure_and_trigger.sql` | INDIVIDUAL | Query 5 (stored procedure) and query 6 (triggers) |
+| 7 | `04_security.sql` | INDIVIDUAL | Roles, privileges, demo users, salted password hashing |
+| 8 | `04b_transactions.sql` | INDIVIDUAL | Atomic booking procedure (COMMIT / ROLLBACK) |
 | - | `05_ERD.png` | GROUP (shared) | ER diagram (Crow's Foot notation) |
 
-File 4 contains several queries. Run **one query at a time** (select it, then
+File 5 (`02_individual_queries.sql`) contains several queries. Run **one query at a time** (select it, then
 Execute) to see each result.
 
 ## My individual contribution
@@ -45,6 +45,7 @@ Execute) to see each result.
 | Part | Where |
 |---|---|
 | Part C: six queries (GROUP BY + HAVING, INNER JOIN, LEFT JOIN, CTE + subquery, stored procedure, trigger) | `02_individual_queries.sql`, `03_procedure_and_trigger.sql` |
+| Part B: `ALTER TABLE` indexes and constraints (no double booking, clinic hours) | `01a_alter_table.sql` |
 | Part D: four roles and privileges, salted SHA-256 password hashing, secure-coding demo | `04_security.sql` |
 | Part D: transaction with rollback | `04b_transactions.sql` |
 | Extra test data and the `PatientAccounts` table (my own addition to the group design) | `01c_my_extra_data.sql`, `04_security.sql` |
